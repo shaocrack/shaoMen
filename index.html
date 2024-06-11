@@ -139,6 +139,15 @@
             },
             
         };
+        function adjustTextSize() {
+            var canvas = document.querySelector('.canvas');
+            var canvasWidth = canvas.offsetWidth;
+            var canvasHeight = canvas.offsetHeight;
+            var textSize = Math.min(canvasWidth, canvasHeight) * 0.05; // Ajusta este valor según sea necesario
+            
+            var textElement = document.querySelector('.text');
+            textElement.style.fontSize = textSize + 'px';
+        }
         S.Drawing = (function () {
             var canvas,
                 context,
@@ -158,6 +167,7 @@
                     this.adjustCanvas();
                     window.addEventListener('resize', function (e) {
                         S.Drawing.adjustCanvas();
+                        adjustTextSize();
                     });
                 },
                 loop: function (fn) {
