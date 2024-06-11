@@ -23,7 +23,7 @@
                 color: #ebf7f4;
             }
             .body--ready {
-                background: -webkit-linear-gradient(top, rgb(25, 146, 100) 0%, rgb(121, 165, 19) 120%);
+                background: -webkit-linear-gradient(top, rgb(181, 243, 219) 0%, rgb(34, 97, 180) 120%);
                 background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(78, 15, 54) 120%);
                 background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
                 background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(14, 137, 194) 120%);
@@ -132,11 +132,12 @@
             init: function () {
                 S.Drawing.init('.canvas');
                 document.body.classList.add('body--ready');
-                S.UI.simulate("hola❤️|pasaba |por aqui|para decirte |qué eres |maravillosa |y que tengas |un |buen dia | y recuerda| siempre| sonreir :D |#countdown 3|Hermosa❤️|#time");
+                S.UI.simulate("hola❤️|pasaba |por aqui|para decirte |qué eres |maravillosa |y que tengas |un |buen dia | y recuerda| siempre| sonreir :D |#countdown 3|Hermosa❤️| La hora es:  |#time");
                 S.Drawing.loop(function () {
                     S.Shape.render();
                 });
-            }
+            },
+            
         };
         S.Drawing = (function () {
             var canvas,
